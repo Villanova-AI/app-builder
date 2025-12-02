@@ -1,10 +1,10 @@
 {
-  "name": "@entando/app-builder",
-  "version": "7.3.0",
-  "author": "Entando",
-  "homepage": "https://github.com/entando/app-builder",
+  "name": "@villanova/app-builder",
+  "version": "0.9",
+  "author": "Villanova",
+  "homepage": "https://github.com/Villanova-AI/app-builder",
   "license": "MIT",
-  "repository": "https://github.com/entando/app-builder",
+  "repository": "https://github.com/Villanova-AI/app-builder",
   "dependencies": {
     "@entando/apimanager": "6.6.8",
     "@entando/datatable": "^2.0.0",
