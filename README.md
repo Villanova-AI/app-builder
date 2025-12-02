@@ -1,6 +1,6 @@
 # Introduction
 
-For more information and documentation visit:  https://dev.entando.org, or https://forum.entando.org. Or for the latest news or product information please visit the main website: https://www.entando.com.
+For more information and documentation visit:  https://villanova-ai.github.io/villanova_developers/, or https://forum.villanova.ai/. Or for the latest news or product information please visit the main website: https://villanova.ai/.
 
 Information below is for running locally or building from source. For usage information see the links above.
 
@@ -14,7 +14,7 @@ Dev instances should be using the `.env.development.local` file while production
 ### Configurable properties
 
 #### `USE_MOCKS` (boolean, default: `true`)
-a boolean used to determine whether the API calls will be against a real Entando Core or if they are just being mocked internally.
+a boolean used to determine whether the API calls will be against a real Villanova Core or if they are just being mocked internally.
 
 #### `USE_MFE` (boolean, default: `true`)
 a boolean used to enable EPC's MFE rendering on AppBuilder.
@@ -23,21 +23,21 @@ a boolean used to enable EPC's MFE rendering on AppBuilder.
 a boolean used to enable the mocking system based on MSW for MFE's, useful for development purpose.
 
 #### `USE_LOCAL_MFE` (boolean, default: `false`)
-a boolean used to reference the MFE static resources on the `/` instead of `entando-de-app/cmsresources`, this is useful for testing with a local static server without infrastructure.
+a boolean used to reference the MFE static resources on the `/` instead of `villanova-de-app/cmsresources`, this is useful for testing with a local static server without infrastructure.
 
 #### `USE_REMOTE_MFE` (boolean, default: `false`)
-a boolean used to reference the MFE static resources on `entando-de-app/cmsresources`, this is useful for testing in remote cluster with a local AppBuilder instance.
+a boolean used to reference the MFE static resources on `villanova-de-app/cmsresources`, this is useful for testing in remote cluster with a local AppBuilder instance.
 
 #### `DOMAIN` (string, default: `null`)
-a string representing the domain name of the Entando Core instance. The protocol is optional and it is possible to specify a subdirectory of the domain.
+a string representing the domain name of the villanova Core instance. The protocol is optional and it is possible to specify a subdirectory of the domain.
 Trailing slashes are valid (but will automatically be removed) and it only validates up to 3rd level domains.
 
 All the following would be valid values:
 
-- http://my.entando.com
-- https://my.entando.com
-- //my.entando.com
-- //my.entando.com/entando-sample
+- http://my.villanova.com
+- https://my.villanova.com
+- //my.villanova.com
+- //my.villanova.com/villanova-sample
 
 #### `CLIENT_ID` (string, default `client_id`)
 string used for the client id during the OAUTH2 authentication process.
@@ -58,10 +58,10 @@ a string containing the path for Keycloak JSON configuration reading endpoint.
 This is a sample response:
 ```
 {
-   "realm":"entando",
-   "auth-server-url":"http://my.entando.com/auth",
+   "realm":"villanova",
+   "auth-server-url":"http://my.villanova.com/auth",
    "ssl-required":"external",
-   "resource":"entando-web",
+   "resource":"villanova-web",
    "public-client":true
 }
 ```
@@ -69,7 +69,7 @@ This is a sample response:
 
 `KEYCLOAK_JSON` will be appended to `DOMAIN` as default if `DOMAIN` is set.
 
-That means, for instance, if `DOMAIN`=https://my.entando.com, `KEYCLOAK_ENABLED`=true and no `KEYCLOAK_JSON` set, then `KEYCLOAK_JSON` will fallback to `https://my.entando.com/keycloak.json`).
+That means, for instance, if `DOMAIN`=https://my.villanova.com, `KEYCLOAK_ENABLED`=true and no `KEYCLOAK_JSON` set, then `KEYCLOAK_JSON` will fallback to `https://my.villanova.com/keycloak.json`).
 
 For further information about Keycloak installation and configuration, see the [official Keycloak website](https://www.keycloak.org/documentation).
 
@@ -77,13 +77,13 @@ Current Keycloak supported version is **11.0.x**.
 
 ### Deploying `app-builder` with `keycloak` locally
 
-For information how to run `app-builder` locally with `keycloak` [check this readme](https://github.com/entando/app-builder/blob/master/with-keycloak.md)
+For information how to run `app-builder` locally with `keycloak` [check this readme](https://github.com/villanova/app-builder/blob/master/with-keycloak.md)
 
 ### Sample .env file
 
 ```
 USE_MOCKS=false
-DOMAIN=//my.entando.com
+DOMAIN=//my.villanova.com
 ```
 ---
 
@@ -99,7 +99,7 @@ DOMAIN=//my.entando.com
 
 - `npm run lint`: runs the linter. It fails if linting rules are not matched.
 - `npm run coverage`: runs unit tests. It fails if an unit test fails, or if the minimum coverage threshold is not met.
-- `npm run import-plugins`: compiles and imports Entando plugins.
+- `npm run import-plugins`: compiles and imports villanova plugins.
 - `npm run build`: compiles the project and creates the `build` directory.
 - `npm run build-full`: runs `npm run lint`, `npm run coverage`, `npm run import-plugins` and `npm run build`
 
@@ -151,8 +151,8 @@ src
 ---
 
 ## API Requests
-Api requests are being done using `@entando/apimanager`.
-For more information checkout the [documentation on NPM](https://www.npmjs.com/package/@entando/apimanager).
+Api requests are being done using `@villanova/apimanager`.
+For more information checkout the [documentation on NPM](https://www.npmjs.com/package/@villanova/apimanager).
 ---
 
 ## Apps

@@ -1,13 +1,13 @@
 FROM registry.access.redhat.com/ubi8/nginx-122:1-18
 ARG VERSION
 ### Required OpenShift Labels
-LABEL name="Entando App Builder" \
-      maintainer="dev@entando.com" \
-      vendor="Entando Inc." \
+LABEL name="Villanova App Builder" \
+      maintainer="dev@evillanova.ai" \
+      vendor="Villanova Spa" \
       version="v${VERSION}" \
-      release="7.3.0" \
-      summary="Entando App Builder" \
-      description="The Entando App Builder is the front end environment to interact with the micro frontends, the WCMS, and other Entando components"
+      release="0.9" \
+      summary="Villanova App Builder" \
+      description="The Villanova App Builder is the front end environment to interact with the micro frontends, the WCMS, and other Villanova components"
 
 COPY licenses /licenses
 

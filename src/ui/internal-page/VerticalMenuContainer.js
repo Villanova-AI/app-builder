@@ -182,7 +182,7 @@ const getHeader = onStartTutorial => (
   <Masthead>
     <Brand
       href={`${publicUrl}${ROUTE_DASHBOARD}`}
-      iconImg={`${publicUrl}/images/entando-logo-white.svg`}
+      iconImg={`${publicUrl}/images/villanova-logo-white.svg`}
       img=""
       onClick={null}
     />
